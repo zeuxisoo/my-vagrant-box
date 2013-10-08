@@ -23,8 +23,13 @@ sudo apt-get -y install curl
 sudo apt-get -y install apache2
 sudo apt-get -y install apache2-utils
 
+# Stop Apache
+sudo /etc/init.d/apache2 stop
+
 # Apache Setup
+sudo chown -Rf vagrant:vagrant /var/lock/apache2
 sudo cp -f /vagrant/files/etc/apache2/httpd.conf /etc/apache2/
+sudo cp -f /vagrant/files/etc/apache2/envvars /etc/apache2/
 sudo cp -f /vagrant/files/etc/apache2/sites-enabled/000-default /etc/apache2/sites-enabled/
 
 # Restart Apache
