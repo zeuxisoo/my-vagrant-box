@@ -5,6 +5,7 @@ sudo apt-get -y update
 
 # Set locale
 sudo locale-gen UTF-8
+sudo dpkg-reconfigure locales
 
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
