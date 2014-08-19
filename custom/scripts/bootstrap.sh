@@ -95,6 +95,11 @@ sudo chown vagrant:vagrant /home/vagrant/.zshrc
 sudo cp -f /vagrant/files/home/vagrant/.zshrc /home/vagrant/
 sudo chown vagrant:vagrant /home/vagrant/.zshrc
 
+# Git FTP
+sudo add-apt-repository ppa:resmo/git-ftp
+sudo apt-get update
+sudo apt-get -y install git-ftp
+
 # Others
 sudo apt-get -y install htop
 sudo apt-get -y install rsync
