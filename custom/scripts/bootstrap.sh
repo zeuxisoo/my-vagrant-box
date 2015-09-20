@@ -70,6 +70,12 @@ sudo apt-get -y install php5-suhosin
 sudo cp -f /vagrant/files/etc/php5/cli/php.ini /etc/php5/cli/
 sudo cp -f /vagrant/files/etc/php5/apache2/php.ini /etc/php5/apache2/
 
+# MySQL Setup
+sudo cp -f /vagrant/files/etc/mysql/my.cnf /etc/mysql/
+
+# Restart MySQL
+sudo service mysql restart
+
 # Enable mod_rewrite
 sudo a2enmod rewrite
 
